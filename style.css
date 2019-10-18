@@ -151,6 +151,11 @@ body {
   object-fit: cover;
 }
 
+.carousel--item a {
+  display: block;
+  padding: 15px;
+}
+
 .to-left {
   animation-name: left;
 }

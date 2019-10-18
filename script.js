@@ -68,9 +68,9 @@ var swipeDetect = (el) => {
   var startTime = 0;
   var elapsedTime = 0;
 
-  var threshold = 150;
+  var threshold = 100;
   var resistant = 100;
-  var allowedTime = 300;
+  var allowedTime = 600;
 
   surface.addEventListener('mousedown', function (e) {
     startX = e.pageX;
@@ -120,11 +120,11 @@ var swipeDetect = (el) => {
     startX = touchObj.pageX;
     startY = touchObj.pageY;
     startTime = new Date().getTime();
-    e.preventDefault();
+    // e.preventDefault();
   });
 
   surface.addEventListener('touchmove', function (e) {
-    e.preventDefault();
+    // e.preventDefault();
   });
 
   surface.addEventListener('touchend', function (e) {
@@ -148,7 +148,7 @@ var swipeDetect = (el) => {
       }
     }
 
-    e.preventDefault();
+    // e.preventDefault();
   });
 }
 
