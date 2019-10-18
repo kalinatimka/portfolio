@@ -1,2 +1,55 @@
+body {
+  font-family: sans-serif;
+}
 
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info--name {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.info--image {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info--wrapper {
+  margin: 20px 50px;
+}
+
+.info--networks {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.info--networks li {
+  margin-right: 20px;
+}
+
+.education--heading {
+  margin: 0;
+  position: relative;
+}
+
+/* .heading--wrapper {
+  position: relative;
+  padding-right: 25px;
+} */
 
