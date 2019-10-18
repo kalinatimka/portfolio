@@ -12,7 +12,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .info--name {
@@ -64,6 +65,10 @@ body {
   border-right: 8px solid transparent;
 }
 
+.education {
+  margin-bottom: 50px;
+}
+
 .education--arrow-rotate {
   transform: rotate(180deg);
 }
@@ -80,5 +85,135 @@ body {
 
 .education--time-active {
   display: block;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000000;
+}
+
+.carousel--item {
+  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  animation: 0.5s ease-in-out;
+}
+
+.carousel--item-active,
+.carousel--item-next {
+  display: flex;
+}
+
+.carousel--item-next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel--container {
+  margin: 30px 20px;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel--control {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carousel--control:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.carousel--control div {
+  box-sizing: border-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.carousel--control-prev div {
+  border-right: 15px solid #000000;
+}
+
+.carousel--control-next div {
+  border-left: 15px solid #000000;
+}
+
+.item--image {
+  height: 300px;
+  max-width: 265px;
+  object-fit: cover;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .info--name {
+    font-size: 24px;
+  }
+
+  .carousel--item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 414px) {
+  .carousel--container {
+    width: 100%;
+  }
+
+  .carousel--control {
+    display: none;
+  }
+
+  .item--image {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .item--wrapper {
+    display: none;
+  }
 }
 
